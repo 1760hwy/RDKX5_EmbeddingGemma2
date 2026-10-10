@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "engineering_screen_passed": true,
+  "accepted_scope": "Text retrieval and offline image/image-text embedding under the tested fixed configuration and small sample set",
+  "precision_floor": 0.95,
+  "retrieval_correct": true,
+  "bpu_each_kind_warm": 100,
+  "independently_audited_vectors": 313,
+  "pulled_bpu_files_sha_matched": 319,
+  "original_raw_full_acceptance_field_preserved": false,
+  "single_request_seconds": {
+    "image": 11.473476799,
+    "mixed": 11.449952424
+  },
+  "real_time_multimodal_accepted": false,
+  "audio_video_accepted": false,
+  "production_generalization_accepted": false,
+  "cpu_is_small_sample_not_100": true,
+  "metrics": "docs/mlp_acceptance/measured_metrics.json",
+  "tutorial": "docs/RDK_X5_EmbeddingGemma2_BPU_实测教程.md",
+  "skill": ".agents/skills/rdkx5-embeddinggemma2/SKILL.md"
+}

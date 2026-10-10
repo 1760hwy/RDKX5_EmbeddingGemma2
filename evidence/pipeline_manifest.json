@@ -1,0 +1,259 @@
+{
+  "gate_manifest": {
+    "vision": [
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk0_compile/embeddinggemma2_vision_mlp_boundary_chunk0.bin",
+        "sha256": "e533f02b011c23e3aca83dc8298f4fc9bc55206b8951d6e00f99b9009ea64185"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk1_compile/embeddinggemma2_vision_mlp_boundary_chunk1.bin",
+        "sha256": "6aaa5ff13ee7caa268f351111ebb122ce876274eb11d7d93964e34fc5c04bfc4"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk2_compile/embeddinggemma2_vision_mlp_boundary_chunk2.bin",
+        "sha256": "e76abe4718a1e871e28b7a4d63f9f9b43384dd1e524d02520eaabcb0c839d956"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk3_compile/embeddinggemma2_vision_mlp_boundary_chunk3.bin",
+        "sha256": "9dcaa38308f5fada506d586864828b107264c5de592c65ab329c9eca7d57bbcb"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk4_compile/embeddinggemma2_vision_mlp_boundary_chunk4.bin",
+        "sha256": "c876cd2711783922bff13a88f05c9c8f7e005611ceb15d43034533f525f62fa2"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk5_compile/embeddinggemma2_vision_mlp_boundary_chunk5.bin",
+        "sha256": "804c889abeac4bf0cacbb595403eb4a6b0ca19b9f8cebf459770a42c244f64e7"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk6_compile/embeddinggemma2_vision_mlp_boundary_chunk6.bin",
+        "sha256": "959ec70a5680cd3fa17755d753ee8c29391f1fd9adfa597c00d3553d3d7c5cb4"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk7_compile/embeddinggemma2_vision_mlp_boundary_chunk7.bin",
+        "sha256": "d756188e52a249385bc3be296b741df5d3afa644db52d60a7ba1daf61454dc22"
+      }
+    ],
+    "images": [
+      {
+        "case": "calibration_0",
+        "image": "samples/GoldenGate.png",
+        "image_sha256": "ff6b23c20b29e03631d5b27590abb7fd89f2998f08227aee21d58a491346b85b",
+        "mixed_text": "The Golden Gate Bridge in San Francisco.",
+        "expected_caption_indices": [
+          0,
+          4
+        ]
+      },
+      {
+        "case": "calibration_1",
+        "image": "samples/kitchen_painting.jpg",
+        "image_sha256": "fe4499f5da92938ab3dd7fd1eb6c8ac24df650c317982f6affa8778702b3aeed",
+        "mixed_text": "A painting of a kitchen interior.",
+        "expected_caption_indices": [
+          1,
+          5
+        ]
+      },
+      {
+        "case": "cat_frame_01",
+        "image": "bpu/vision_trim576/heldout_images_letterbox/cat_frame_01_letterbox.png",
+        "image_sha256": "0a75bfac605372d9507a1d945941cb3ab09c7a3e21e70249a71c504f9c70aef2",
+        "mixed_text": "A cat dozing on a sofa.",
+        "expected_caption_indices": [
+          2,
+          6
+        ]
+      },
+      {
+        "case": "cat_frame_02",
+        "image": "bpu/vision_trim576/heldout_images_letterbox/cat_frame_02_letterbox.png",
+        "image_sha256": "84e3590415687aafa3530a9d51aa59ea6dfb34d8bd2b9a4fbe5a54c24d147150",
+        "mixed_text": "A cat dozing on a sofa.",
+        "expected_caption_indices": [
+          2,
+          6
+        ]
+      },
+      {
+        "case": "cat_frame_03",
+        "image": "bpu/vision_trim576/heldout_images_letterbox/cat_frame_03_letterbox.png",
+        "image_sha256": "24b73f0954713665f89031bf1c64f7f2f70fcd8374d0d88aaafe3dfaff50064d",
+        "mixed_text": "A cat dozing on a sofa.",
+        "expected_caption_indices": [
+          2,
+          6
+        ]
+      },
+      {
+        "case": "cat_frame_04",
+        "image": "bpu/vision_trim576/heldout_images_letterbox/cat_frame_04_letterbox.png",
+        "image_sha256": "7ce166b4c00bb141cbe7d7f05e17e8760230d067cdd424b3a854c03f4467d71a",
+        "mixed_text": "A cat dozing on a sofa.",
+        "expected_caption_indices": [
+          2,
+          6
+        ]
+      }
+    ],
+    "text": [
+      {
+        "case": "text_calibration_000"
+      },
+      {
+        "case": "text_calibration_001"
+      },
+      {
+        "case": "text_calibration_002"
+      },
+      {
+        "case": "text_calibration_003"
+      },
+      {
+        "case": "text_calibration_004"
+      },
+      {
+        "case": "text_calibration_005"
+      },
+      {
+        "case": "text_calibration_006"
+      },
+      {
+        "case": "text_calibration_007"
+      },
+      {
+        "case": "text_calibration_008"
+      },
+      {
+        "case": "text_calibration_009"
+      },
+      {
+        "case": "text_calibration_010"
+      },
+      {
+        "case": "text_calibration_011"
+      },
+      {
+        "case": "text_calibration_012"
+      },
+      {
+        "case": "text_calibration_013"
+      },
+      {
+        "case": "text_calibration_014"
+      },
+      {
+        "case": "text_calibration_015"
+      },
+      {
+        "case": "text_heldout_000"
+      },
+      {
+        "case": "text_heldout_001"
+      },
+      {
+        "case": "text_heldout_002"
+      },
+      {
+        "case": "text_heldout_003"
+      },
+      {
+        "case": "text_heldout_004"
+      },
+      {
+        "case": "text_heldout_005"
+      },
+      {
+        "case": "text_heldout_006"
+      },
+      {
+        "case": "text_heldout_007"
+      },
+      {
+        "case": "text_heldout_008"
+      },
+      {
+        "case": "text_heldout_009"
+      },
+      {
+        "case": "text_heldout_010"
+      },
+      {
+        "case": "text_heldout_011"
+      },
+      {
+        "case": "text_heldout_012"
+      },
+      {
+        "case": "text_heldout_013"
+      },
+      {
+        "case": "text_heldout_014"
+      },
+      {
+        "case": "text_heldout_015"
+      }
+    ],
+    "output": "bpu/results/mlp_boundary_full_board_gate",
+    "scope": "Six images, four cat frames correlated; square preprocessing; text32 and real board captions",
+    "captions": [
+      "The Golden Gate Bridge in San Francisco.",
+      "A painting of a kitchen interior.",
+      "A cat dozing on a sofa.",
+      "A sports car racing on a highway.",
+      "\u65e7\u91d1\u5c71\u7684\u91d1\u95e8\u5927\u6865\u3002",
+      "\u4e00\u5e45\u63cf\u7ed8\u53a8\u623f\u5185\u90e8\u7684\u753b\u3002",
+      "\u4e00\u53ea\u6b63\u5728\u6253\u778c\u7761\u7684\u732b\u3002",
+      "\u9ad8\u901f\u516c\u8def\u4e0a\u98de\u9a70\u7684\u8dd1\u8f66\u3002"
+    ],
+    "fusion": {
+      "path": "bpu/fusion_l128/a16_w8_sm8/embeddinggemma2_fusion_l128.bin",
+      "sha256": "54c8badcafa0886129016340d57d5b8ffee0430b4df9efd808aa7135fcc1a8c7"
+    },
+    "data": "bpu/vision_trim576/mlp_boundary_full16/full_board_inputs/data.npz",
+    "data_sha256": "0b0a84f19c8db7563e185c21ef6b3eb6ae8c0edc293e26a880ae2400eee65f29",
+    "quantized_sha256": "e5ee6bf67e0ffd8412e3d41d24be4c0a4e2054bb163c457fba69a753959f5aff"
+  },
+  "images": [
+    {
+      "source": "samples/GoldenGate.png",
+      "source_sha256": "ff6b23c20b29e03631d5b27590abb7fd89f2998f08227aee21d58a491346b85b",
+      "letterbox": false,
+      "mixed_text": "The Golden Gate Bridge in San Francisco."
+    },
+    {
+      "source": "samples/kitchen_painting.jpg",
+      "source_sha256": "fe4499f5da92938ab3dd7fd1eb6c8ac24df650c317982f6affa8778702b3aeed",
+      "letterbox": false,
+      "mixed_text": "A painting of a kitchen interior."
+    },
+    {
+      "source": "samples/prepared/video_frames/frame_01.png",
+      "source_sha256": "cb8471f14a6474531fca0619036871b81e18a0e9d4d2b2637edc1a7d06a6af3d",
+      "letterbox": true,
+      "mixed_text": "A cat dozing on a sofa."
+    },
+    {
+      "source": "samples/prepared/video_frames/frame_02.png",
+      "source_sha256": "1fe26062e99f8f26b2b3f4317df3f03c6d772fa60d72f7c6608f5c09e53385b8",
+      "letterbox": true,
+      "mixed_text": "A cat dozing on a sofa."
+    },
+    {
+      "source": "samples/prepared/video_frames/frame_03.png",
+      "source_sha256": "2c618f677fce507ed3b2524f5b2e40138bfd6afccd5ab57d7680933cae52f82c",
+      "letterbox": true,
+      "mixed_text": "A cat dozing on a sofa."
+    },
+    {
+      "source": "samples/prepared/video_frames/frame_04.png",
+      "source_sha256": "aea052ea991ce4cc2aee9443c1fc18c52c0615070864423410eb8161108e3285",
+      "letterbox": true,
+      "mixed_text": "A cat dozing on a sofa."
+    }
+  ],
+  "caption_reference": "bpu/results/multimodal_semantic_diagnosis/caption_embeddings.npy",
+  "caption_reference_sha256": "1701ba5d1046cd5910194dd54cd474ef6deb6cceb9f8745426e6e799833e0fa3",
+  "cpu_baseline_note": "Same batch6 scheduling FP32 eager four threads, text8 and image/mixed18 warm; CPU is a small sample baseline, not CPU100.",
+  "bpu_note": "New repaired bins: fusion resident; source preprocessing and every visual chunk load/free/copy counted in batch6 wall; each kind100 warm. Throughput amortization is not single-image response latency."
+}

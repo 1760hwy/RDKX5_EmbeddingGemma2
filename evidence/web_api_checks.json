@@ -1,0 +1,43 @@
+{
+  "status": "complete",
+  "real_board": true,
+  "cases": [
+    {
+      "case": "text",
+      "fp32_cosine": 0.9871055767225506,
+      "input_ms": 908.6652590049198,
+      "total_ms": 909.4728839991149,
+      "top": "The Golden Gate Bridge in San Francisco."
+    },
+    {
+      "case": "image",
+      "fp32_cosine": 0.9775052961538131,
+      "input_ms": 11294.959734994336,
+      "total_ms": 11298.345272996812,
+      "top": "The Golden Gate Bridge in San Francisco."
+    },
+    {
+      "case": "mixed",
+      "fp32_cosine": 0.9733767832789416,
+      "input_ms": 11360.173480992671,
+      "total_ms": 11362.103521008976,
+      "top": "A painting of a kitchen interior."
+    },
+    {
+      "case": "upload",
+      "fp32_cosine": 0.9658411382512885,
+      "input_ms": 11447.17412099999,
+      "total_ms": 11448.890285988455,
+      "top": "A cat dozing on a sofa."
+    }
+  ],
+  "invalid_requests_rejected": true,
+  "invalid_image_recovery": true,
+  "model_status": {
+    "status": "ready",
+    "message": "模型就绪",
+    "active_job": null,
+    "model_load_seconds": 22.954604632992414,
+    "queued": 0
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "file": "GoldenGate.png",
+    "url": "https://raw.githubusercontent.com/google-gemma/cookbook/main/apps/sample-data/GoldenGate.png",
+    "size": 822311,
+    "sha256": "ff6b23c20b29e03631d5b27590abb7fd89f2998f08227aee21d58a491346b85b"
+  },
+  {
+    "file": "kitchen_painting.jpg",
+    "url": "https://raw.githubusercontent.com/google-gemma/cookbook/main/apps/sample-data/kitchen_painting.jpg",
+    "size": 1804970,
+    "sha256": "fe4499f5da92938ab3dd7fd1eb6c8ac24df650c317982f6affa8778702b3aeed"
+  },
+  {
+    "file": "roses-are.wav",
+    "url": "https://ai.google.dev/gemma/docs/audio/roses-are.wav",
+    "size": 295404,
+    "sha256": "9e42e31cbc41cb3c31dc4ddb1dc05fef322c61b98cc03a38c06749b2db94f6b2"
+  },
+  {
+    "file": "cat_dozing.mp4",
+    "url": "https://raw.githubusercontent.com/bebechien/gemma/main/videos/cat_dozing.mp4",
+    "size": 1564895,
+    "sha256": "9ce447d4bbba2e0737d6bcce465c1ccba1ad0a748a7466674e39ecc91a81f66f"
+  }
+]

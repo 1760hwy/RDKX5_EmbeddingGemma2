@@ -1,0 +1,302 @@
+[
+  {
+    "file": "image_batch_000_item_0_embedding.npy",
+    "sha256": "5d99cd6e9ac81cd6a046a5f5a020b7e0fe9b14657f9486c34b69ad6325400b77",
+    "matched": true
+  },
+  {
+    "file": "image_batch_000_item_1_embedding.npy",
+    "sha256": "ec8ef4656c9049c0aa8823e1a22d99c074aab37aaf1a8f640e5d3e89138554e7",
+    "matched": true
+  },
+  {
+    "file": "image_batch_000_item_2_embedding.npy",
+    "sha256": "414dde477d8394734e4aef89244efb278fb8c3eb52c48f371ce228f11ed1d766",
+    "matched": true
+  },
+  {
+    "file": "image_batch_000_item_3_embedding.npy",
+    "sha256": "8b5e4a0b5ed0d1e96f22c4060e743ddb7fe7cefb94ef8236bf62d169cb3daf14",
+    "matched": true
+  },
+  {
+    "file": "image_batch_000_item_4_embedding.npy",
+    "sha256": "6f5541e997af4df0574a4d7735e7fb1b98072f9c32e07fc702f4680a5d0e364d",
+    "matched": true
+  },
+  {
+    "file": "image_batch_000_item_5_embedding.npy",
+    "sha256": "2199450e2118b8cc6b3799fac7abf0d2864f2e7338071c7ecc8de565d95b5622",
+    "matched": true
+  },
+  {
+    "file": "image_batch_001_item_0_embedding.npy",
+    "sha256": "5d99cd6e9ac81cd6a046a5f5a020b7e0fe9b14657f9486c34b69ad6325400b77",
+    "matched": true
+  },
+  {
+    "file": "image_batch_001_item_1_embedding.npy",
+    "sha256": "ec8ef4656c9049c0aa8823e1a22d99c074aab37aaf1a8f640e5d3e89138554e7",
+    "matched": true
+  },
+  {
+    "file": "image_batch_001_item_2_embedding.npy",
+    "sha256": "414dde477d8394734e4aef89244efb278fb8c3eb52c48f371ce228f11ed1d766",
+    "matched": true
+  },
+  {
+    "file": "image_batch_001_item_3_embedding.npy",
+    "sha256": "8b5e4a0b5ed0d1e96f22c4060e743ddb7fe7cefb94ef8236bf62d169cb3daf14",
+    "matched": true
+  },
+  {
+    "file": "image_batch_001_item_4_embedding.npy",
+    "sha256": "6f5541e997af4df0574a4d7735e7fb1b98072f9c32e07fc702f4680a5d0e364d",
+    "matched": true
+  },
+  {
+    "file": "image_batch_001_item_5_embedding.npy",
+    "sha256": "2199450e2118b8cc6b3799fac7abf0d2864f2e7338071c7ecc8de565d95b5622",
+    "matched": true
+  },
+  {
+    "file": "image_batch_002_item_0_embedding.npy",
+    "sha256": "5d99cd6e9ac81cd6a046a5f5a020b7e0fe9b14657f9486c34b69ad6325400b77",
+    "matched": true
+  },
+  {
+    "file": "image_batch_002_item_1_embedding.npy",
+    "sha256": "ec8ef4656c9049c0aa8823e1a22d99c074aab37aaf1a8f640e5d3e89138554e7",
+    "matched": true
+  },
+  {
+    "file": "image_batch_002_item_2_embedding.npy",
+    "sha256": "414dde477d8394734e4aef89244efb278fb8c3eb52c48f371ce228f11ed1d766",
+    "matched": true
+  },
+  {
+    "file": "image_batch_002_item_3_embedding.npy",
+    "sha256": "8b5e4a0b5ed0d1e96f22c4060e743ddb7fe7cefb94ef8236bf62d169cb3daf14",
+    "matched": true
+  },
+  {
+    "file": "image_batch_002_item_4_embedding.npy",
+    "sha256": "6f5541e997af4df0574a4d7735e7fb1b98072f9c32e07fc702f4680a5d0e364d",
+    "matched": true
+  },
+  {
+    "file": "image_batch_002_item_5_embedding.npy",
+    "sha256": "2199450e2118b8cc6b3799fac7abf0d2864f2e7338071c7ecc8de565d95b5622",
+    "matched": true
+  },
+  {
+    "file": "image_batch_003_item_0_embedding.npy",
+    "sha256": "5d99cd6e9ac81cd6a046a5f5a020b7e0fe9b14657f9486c34b69ad6325400b77",
+    "matched": true
+  },
+  {
+    "file": "image_batch_003_item_1_embedding.npy",
+    "sha256": "ec8ef4656c9049c0aa8823e1a22d99c074aab37aaf1a8f640e5d3e89138554e7",
+    "matched": true
+  },
+  {
+    "file": "image_batch_003_item_2_embedding.npy",
+    "sha256": "414dde477d8394734e4aef89244efb278fb8c3eb52c48f371ce228f11ed1d766",
+    "matched": true
+  },
+  {
+    "file": "image_batch_003_item_3_embedding.npy",
+    "sha256": "8b5e4a0b5ed0d1e96f22c4060e743ddb7fe7cefb94ef8236bf62d169cb3daf14",
+    "matched": true
+  },
+  {
+    "file": "image_batch_003_item_4_embedding.npy",
+    "sha256": "6f5541e997af4df0574a4d7735e7fb1b98072f9c32e07fc702f4680a5d0e364d",
+    "matched": true
+  },
+  {
+    "file": "image_batch_003_item_5_embedding.npy",
+    "sha256": "2199450e2118b8cc6b3799fac7abf0d2864f2e7338071c7ecc8de565d95b5622",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_000_item_0_embedding.npy",
+    "sha256": "eb56fd6f11bd586d5ae4cde347c96cbb6548cefcf152222cdf059137f1e11634",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_000_item_1_embedding.npy",
+    "sha256": "12ba75c8308d7dc1438867893d7ee167d1036b4a35bc9713e066a27a3683935c",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_000_item_2_embedding.npy",
+    "sha256": "390b1f80d0f71594f6a14f5c36f88f693a55b1a9c3e1785aef502ac86a1f7844",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_000_item_3_embedding.npy",
+    "sha256": "c3ff065fe6b523d8b2182ee4ac14f6c4f49d99dc8036ac5c8f3716fdb472677d",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_000_item_4_embedding.npy",
+    "sha256": "595f610da005fac1cbd361b1dacf86f7e14be8ee3458bd65295791f199d36b96",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_000_item_5_embedding.npy",
+    "sha256": "b21b7d59e98d52bb28fae2c24cb4f03b6ccc80393b9d9408901b93459835d3e8",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_001_item_0_embedding.npy",
+    "sha256": "eb56fd6f11bd586d5ae4cde347c96cbb6548cefcf152222cdf059137f1e11634",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_001_item_1_embedding.npy",
+    "sha256": "12ba75c8308d7dc1438867893d7ee167d1036b4a35bc9713e066a27a3683935c",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_001_item_2_embedding.npy",
+    "sha256": "390b1f80d0f71594f6a14f5c36f88f693a55b1a9c3e1785aef502ac86a1f7844",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_001_item_3_embedding.npy",
+    "sha256": "c3ff065fe6b523d8b2182ee4ac14f6c4f49d99dc8036ac5c8f3716fdb472677d",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_001_item_4_embedding.npy",
+    "sha256": "595f610da005fac1cbd361b1dacf86f7e14be8ee3458bd65295791f199d36b96",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_001_item_5_embedding.npy",
+    "sha256": "b21b7d59e98d52bb28fae2c24cb4f03b6ccc80393b9d9408901b93459835d3e8",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_002_item_0_embedding.npy",
+    "sha256": "eb56fd6f11bd586d5ae4cde347c96cbb6548cefcf152222cdf059137f1e11634",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_002_item_1_embedding.npy",
+    "sha256": "12ba75c8308d7dc1438867893d7ee167d1036b4a35bc9713e066a27a3683935c",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_002_item_2_embedding.npy",
+    "sha256": "390b1f80d0f71594f6a14f5c36f88f693a55b1a9c3e1785aef502ac86a1f7844",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_002_item_3_embedding.npy",
+    "sha256": "c3ff065fe6b523d8b2182ee4ac14f6c4f49d99dc8036ac5c8f3716fdb472677d",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_002_item_4_embedding.npy",
+    "sha256": "595f610da005fac1cbd361b1dacf86f7e14be8ee3458bd65295791f199d36b96",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_002_item_5_embedding.npy",
+    "sha256": "b21b7d59e98d52bb28fae2c24cb4f03b6ccc80393b9d9408901b93459835d3e8",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_003_item_0_embedding.npy",
+    "sha256": "eb56fd6f11bd586d5ae4cde347c96cbb6548cefcf152222cdf059137f1e11634",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_003_item_1_embedding.npy",
+    "sha256": "12ba75c8308d7dc1438867893d7ee167d1036b4a35bc9713e066a27a3683935c",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_003_item_2_embedding.npy",
+    "sha256": "390b1f80d0f71594f6a14f5c36f88f693a55b1a9c3e1785aef502ac86a1f7844",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_003_item_3_embedding.npy",
+    "sha256": "c3ff065fe6b523d8b2182ee4ac14f6c4f49d99dc8036ac5c8f3716fdb472677d",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_003_item_4_embedding.npy",
+    "sha256": "595f610da005fac1cbd361b1dacf86f7e14be8ee3458bd65295791f199d36b96",
+    "matched": true
+  },
+  {
+    "file": "mixed_batch_003_item_5_embedding.npy",
+    "sha256": "b21b7d59e98d52bb28fae2c24cb4f03b6ccc80393b9d9408901b93459835d3e8",
+    "matched": true
+  },
+  {
+    "file": "summary.json",
+    "sha256": "b8916481b5567d77d727dfe012547994ce840a17027f287792749badbcd9af61",
+    "matched": true
+  },
+  {
+    "file": "text_000_embedding.npy",
+    "sha256": "a23b817114805a281cb0a214766a33e69fd7a58aa6acf357879b618582ce96c3",
+    "matched": true
+  },
+  {
+    "file": "text_001_embedding.npy",
+    "sha256": "31a8ebfa7e310e6672fcdc3e239f09f860a87cd469a58c836a3217ebc668eaee",
+    "matched": true
+  },
+  {
+    "file": "text_002_embedding.npy",
+    "sha256": "e450875b6d061049141c12c8fc91776c26c33a65b59d49282464208b3510bcf8",
+    "matched": true
+  },
+  {
+    "file": "text_003_embedding.npy",
+    "sha256": "f219565c467262855dac09b236d7f97602cac4e59756a89bec294506a8d06cbc",
+    "matched": true
+  },
+  {
+    "file": "text_004_embedding.npy",
+    "sha256": "2f94c9239950d78401cbfc49836c05049f57a4db0361cd858661703ac1255719",
+    "matched": true
+  },
+  {
+    "file": "text_005_embedding.npy",
+    "sha256": "956c129435b9cf82da28afc483f990402d329c231b0830f90cc707d5e17dde26",
+    "matched": true
+  },
+  {
+    "file": "text_006_embedding.npy",
+    "sha256": "454e7e774ebc60b966fdeff625fbf3ea38d7bbfa71feb69f0fb2096e7552a4d2",
+    "matched": true
+  },
+  {
+    "file": "text_007_embedding.npy",
+    "sha256": "784e9df4eedce4d890806a836f573eacf159a1ce67d2c2c197498cd8badccad2",
+    "matched": true
+  },
+  {
+    "file": "text_cold_embedding.npy",
+    "sha256": "a23b817114805a281cb0a214766a33e69fd7a58aa6acf357879b618582ce96c3",
+    "matched": true
+  },
+  {
+    "file": "mlp_batch_acceptance_cpu.log",
+    "sha256": "a9a719667ec05b5655c654348d015bb063f0713ba5c7bdeda6ebe7433143ed7a",
+    "matched": true
+  },
+  {
+    "file": "mlp_batch_acceptance_cpu.exit",
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "matched": true
+  }
+]

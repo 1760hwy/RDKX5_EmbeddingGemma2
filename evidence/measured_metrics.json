@@ -1,0 +1,288 @@
+{
+  "candidate": {
+    "vision": [
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk0_compile/embeddinggemma2_vision_mlp_boundary_chunk0.bin",
+        "sha256": "e533f02b011c23e3aca83dc8298f4fc9bc55206b8951d6e00f99b9009ea64185"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk1_compile/embeddinggemma2_vision_mlp_boundary_chunk1.bin",
+        "sha256": "6aaa5ff13ee7caa268f351111ebb122ce876274eb11d7d93964e34fc5c04bfc4"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk2_compile/embeddinggemma2_vision_mlp_boundary_chunk2.bin",
+        "sha256": "e76abe4718a1e871e28b7a4d63f9f9b43384dd1e524d02520eaabcb0c839d956"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk3_compile/embeddinggemma2_vision_mlp_boundary_chunk3.bin",
+        "sha256": "9dcaa38308f5fada506d586864828b107264c5de592c65ab329c9eca7d57bbcb"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk4_compile/embeddinggemma2_vision_mlp_boundary_chunk4.bin",
+        "sha256": "c876cd2711783922bff13a88f05c9c8f7e005611ceb15d43034533f525f62fa2"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk5_compile/embeddinggemma2_vision_mlp_boundary_chunk5.bin",
+        "sha256": "804c889abeac4bf0cacbb595403eb4a6b0ca19b9f8cebf459770a42c244f64e7"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk6_compile/embeddinggemma2_vision_mlp_boundary_chunk6.bin",
+        "sha256": "959ec70a5680cd3fa17755d753ee8c29391f1fd9adfa597c00d3553d3d7c5cb4"
+      },
+      {
+        "path": "bpu/vision_trim576/mlp_boundary_full16/chunk7_compile/embeddinggemma2_vision_mlp_boundary_chunk7.bin",
+        "sha256": "d756188e52a249385bc3be296b741df5d3afa644db52d60a7ba1daf61454dc22"
+      }
+    ],
+    "images": [
+      {
+        "case": "calibration_0",
+        "image": "samples/GoldenGate.png",
+        "image_sha256": "ff6b23c20b29e03631d5b27590abb7fd89f2998f08227aee21d58a491346b85b",
+        "mixed_text": "The Golden Gate Bridge in San Francisco.",
+        "expected_caption_indices": [
+          0,
+          4
+        ]
+      },
+      {
+        "case": "calibration_1",
+        "image": "samples/kitchen_painting.jpg",
+        "image_sha256": "fe4499f5da92938ab3dd7fd1eb6c8ac24df650c317982f6affa8778702b3aeed",
+        "mixed_text": "A painting of a kitchen interior.",
+        "expected_caption_indices": [
+          1,
+          5
+        ]
+      },
+      {
+        "case": "cat_frame_01",
+        "image": "bpu/vision_trim576/heldout_images_letterbox/cat_frame_01_letterbox.png",
+        "image_sha256": "0a75bfac605372d9507a1d945941cb3ab09c7a3e21e70249a71c504f9c70aef2",
+        "mixed_text": "A cat dozing on a sofa.",
+        "expected_caption_indices": [
+          2,
+          6
+        ]
+      },
+      {
+        "case": "cat_frame_02",
+        "image": "bpu/vision_trim576/heldout_images_letterbox/cat_frame_02_letterbox.png",
+        "image_sha256": "84e3590415687aafa3530a9d51aa59ea6dfb34d8bd2b9a4fbe5a54c24d147150",
+        "mixed_text": "A cat dozing on a sofa.",
+        "expected_caption_indices": [
+          2,
+          6
+        ]
+      },
+      {
+        "case": "cat_frame_03",
+        "image": "bpu/vision_trim576/heldout_images_letterbox/cat_frame_03_letterbox.png",
+        "image_sha256": "24b73f0954713665f89031bf1c64f7f2f70fcd8374d0d88aaafe3dfaff50064d",
+        "mixed_text": "A cat dozing on a sofa.",
+        "expected_caption_indices": [
+          2,
+          6
+        ]
+      },
+      {
+        "case": "cat_frame_04",
+        "image": "bpu/vision_trim576/heldout_images_letterbox/cat_frame_04_letterbox.png",
+        "image_sha256": "7ce166b4c00bb141cbe7d7f05e17e8760230d067cdd424b3a854c03f4467d71a",
+        "mixed_text": "A cat dozing on a sofa.",
+        "expected_caption_indices": [
+          2,
+          6
+        ]
+      }
+    ],
+    "text": [
+      {
+        "case": "text_calibration_000"
+      },
+      {
+        "case": "text_calibration_001"
+      },
+      {
+        "case": "text_calibration_002"
+      },
+      {
+        "case": "text_calibration_003"
+      },
+      {
+        "case": "text_calibration_004"
+      },
+      {
+        "case": "text_calibration_005"
+      },
+      {
+        "case": "text_calibration_006"
+      },
+      {
+        "case": "text_calibration_007"
+      },
+      {
+        "case": "text_calibration_008"
+      },
+      {
+        "case": "text_calibration_009"
+      },
+      {
+        "case": "text_calibration_010"
+      },
+      {
+        "case": "text_calibration_011"
+      },
+      {
+        "case": "text_calibration_012"
+      },
+      {
+        "case": "text_calibration_013"
+      },
+      {
+        "case": "text_calibration_014"
+      },
+      {
+        "case": "text_calibration_015"
+      },
+      {
+        "case": "text_heldout_000"
+      },
+      {
+        "case": "text_heldout_001"
+      },
+      {
+        "case": "text_heldout_002"
+      },
+      {
+        "case": "text_heldout_003"
+      },
+      {
+        "case": "text_heldout_004"
+      },
+      {
+        "case": "text_heldout_005"
+      },
+      {
+        "case": "text_heldout_006"
+      },
+      {
+        "case": "text_heldout_007"
+      },
+      {
+        "case": "text_heldout_008"
+      },
+      {
+        "case": "text_heldout_009"
+      },
+      {
+        "case": "text_heldout_010"
+      },
+      {
+        "case": "text_heldout_011"
+      },
+      {
+        "case": "text_heldout_012"
+      },
+      {
+        "case": "text_heldout_013"
+      },
+      {
+        "case": "text_heldout_014"
+      },
+      {
+        "case": "text_heldout_015"
+      }
+    ],
+    "output": "bpu/results/mlp_boundary_full_board_gate",
+    "scope": "Six images, four cat frames correlated; square preprocessing; text32 and real board captions",
+    "captions": [
+      "The Golden Gate Bridge in San Francisco.",
+      "A painting of a kitchen interior.",
+      "A cat dozing on a sofa.",
+      "A sports car racing on a highway.",
+      "\u65e7\u91d1\u5c71\u7684\u91d1\u95e8\u5927\u6865\u3002",
+      "\u4e00\u5e45\u63cf\u7ed8\u53a8\u623f\u5185\u90e8\u7684\u753b\u3002",
+      "\u4e00\u53ea\u6b63\u5728\u6253\u778c\u7761\u7684\u732b\u3002",
+      "\u9ad8\u901f\u516c\u8def\u4e0a\u98de\u9a70\u7684\u8dd1\u8f66\u3002"
+    ],
+    "fusion": {
+      "path": "bpu/fusion_l128/a16_w8_sm8/embeddinggemma2_fusion_l128.bin",
+      "sha256": "54c8badcafa0886129016340d57d5b8ffee0430b4df9efd808aa7135fcc1a8c7"
+    },
+    "data": "bpu/vision_trim576/mlp_boundary_full16/full_board_inputs/data.npz",
+    "data_sha256": "0b0a84f19c8db7563e185c21ef6b3eb6ae8c0edc293e26a880ae2400eee65f29",
+    "quantized_sha256": "e5ee6bf67e0ffd8412e3d41d24be4c0a4e2054bb163c457fba69a753959f5aff"
+  },
+  "modes": {
+    "text": {
+      "cpu_wall_ms": 2683.931067625963,
+      "bpu_wall_ms": 946.0471480981505,
+      "wall_speedup": 2.836995040914716,
+      "cpu_core_ms": null,
+      "bpu_core_ms": 934.2549128,
+      "core_speedup": null,
+      "minimum_cosine": 0.9584437012672424
+    },
+    "image": {
+      "cpu_wall_ms": 14612.610919999295,
+      "bpu_wall_ms": 5355.17935261043,
+      "wall_speedup": 2.728687492581597,
+      "cpu_core_ms": 14498.69355911263,
+      "bpu_core_ms": 3919.22667858,
+      "core_speedup": 3.6993761137505174,
+      "minimum_cosine": 0.9634868502616882,
+      "batch6_median_ms": 31967.039505005232,
+      "batch6_max_ms": 32144.217306995415,
+      "last_batch_size": 4,
+      "last_batch_wall_ms": 23824.210949009284
+    },
+    "mixed": {
+      "cpu_wall_ms": 14577.989526833537,
+      "bpu_wall_ms": 5376.823036740097,
+      "wall_speedup": 2.71126451944232,
+      "cpu_core_ms": 14463.686517611171,
+      "bpu_core_ms": 3939.6382406699995,
+      "core_speedup": 3.6713235160270417,
+      "minimum_cosine": 0.9663949608802795,
+      "batch6_median_ms": 32071.910368009412,
+      "batch6_max_ms": 32401.365865996922,
+      "last_batch_size": 4,
+      "last_batch_wall_ms": 23822.983512000064
+    }
+  },
+  "stability": {
+    "temperature_min_c": 48.566,
+    "temperature_max_c": 51.107,
+    "rss_sample_min_mb": 1852.223488,
+    "rss_sample_max_mb": 1856.864256,
+    "observed_cpu_mhz": [
+      600.0,
+      1200.0,
+      1500.0
+    ]
+  },
+  "independently_audited_vectors": 313,
+  "initial_cpu_lookup_load_s": 18.167377242003568,
+  "initial_fusion_load_s": 4.586951258999761,
+  "text_cold_ms": 5537.28410199983,
+  "single_request_small_probe": {
+    "cpu": {
+      "image": 14794.451553335724,
+      "mixed": 14838.254566668184
+    },
+    "bpu": {
+      "image": 11473.476798671376,
+      "mixed": 11449.95242432924
+    }
+  },
+  "cpu_text_core_diagnostic": {
+    "cpu8_ms": 2679.3095850007376,
+    "bpu_matched8_ms": 925.56684225,
+    "speedup": 2.894776976331055,
+    "scope": "eight matching captions, distinct CPU timing diagnostic, not CPU100"
+  },
+  "multimodal_core_screen_passed": true,
+  "precision_and_wall_screen_passed": true,
+  "all_core_screen_passed": true
+}

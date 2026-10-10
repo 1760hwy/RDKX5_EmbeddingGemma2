@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EmbeddingGemma 2 · 模型测试室</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script></head>
+<body>
+<aside class="sidebar">
+  <div class="brand"><span class="mark">E</span><div>模型测试室<small>EmbeddingGemma 2</small></div></div>
+  <button id="new-test" class="outline">＋ 新测试</button>
+  <section><h2>候选描述</h2><p>模型会把你的输入与这些句子比较。每行一条，最多12条。</p>
+    <label class="sr-only" for="candidates">候选描述，每行一条</label>
+    <textarea id="candidates" rows="10">旧金山的金门大桥。
+一幅描绘厨房内部的画。
+一只猫躺在沙发上休息。
+一台工业机器人正在工作。
+The Golden Gate Bridge in San Francisco.
+A painting of a kitchen interior.
+A cat dozing on a sofa.
+A person riding a bicycle.</textarea>
+  </section>
+  <section><h2>用已测图片试一试</h2><div class="samples"><button data-sample="bridge">金门大桥</button><button data-sample="kitchen">厨房绘画</button><button data-sample="cat">猫咪帧</button></div></section>
+  <div class="sidebar-note">全部推理在局域网RDK X5上执行。<br>不调用外部聊天服务。<br><span>固定128 tokens · 单张图像留边处理</span></div>
+</aside>
+<main>
+  <header><div><strong>EmbeddingGemma 2</strong><span class="chip">RDK X5 · BPU</span></div><div id="status" role="status"><span class="dot"></span><span id="status-text">连接板端…</span></div></header>
+  <div id="messages" class="messages" aria-live="polite">
+    <section id="welcome" class="welcome"><div class="welcome-mark">E</div><h1>直接看看模型能匹配什么</h1><p>输入一句话，或上传图片，查看语义匹配、真实耗时与向量。<br>它是Embedding模型，输出向量，不生成聊天回答。</p>
+      <div class="starters"><button id="text-example"><strong>文本语义</strong><span>“一只小猫正在打盹”能匹配什么？</span></button><button id="image-example"><strong>图片匹配</strong><span>用金门大桥图片测试中英文描述</span></button><button id="mixed-example"><strong>图文混合</strong><span>给厨房图片加上文字再比较</span></button></div>
+    </section>
+  </div>
+  <div class="composer-area"><div id="preview" hidden></div>
+    <form id="form" class="composer"><label class="sr-only" for="prompt">测试文本</label><textarea id="prompt" rows="2" placeholder="输入测试文本，也可以只上传图片…"></textarea><div class="composer-actions"><label class="upload" for="file">＋ 添加图片</label><input id="file" type="file" accept="image/png,image/jpeg,image/webp" hidden><span id="hint">Enter发送 · Shift+Enter换行</span><button id="send" type="submit" disabled>开始测试 ↑</button></div></form>
+    <p class="footnote">相似度不是概率或准确率。图片单次可能需要约12秒；首次候选编码会增加等待时间。</p>
+  </div>
+</main>
+</body></html>
