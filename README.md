@@ -1,80 +1,133 @@
 # RDK X5 × Google EmbeddingGemma 2
 
-在 RDK X5 上部署 EmbeddingGemma 2，实现文本、图片与图文联合的向量检索，以及局域网浏览器测试。
+**English** | [简体中文](README.zh-CN.md)
 
-**它是 Embedding 模型，输出向量与检索排名，不生成聊天回答。** 本仓库公开部署与实验源码、中文教程和测量证据；权重、厂商 SDK 与编译模型需要另行合法准备。
+Text, image, and image–text embedding retrieval on the RDK X5, with a browser-based test interface for your local network.
 
-![部署与检索流程](assets/pipeline.png)
+**This is an embedding model, not a conversational language model.** It returns 768-dimensional vectors and ranks supplied candidates; it does not generate answers. This repository includes deployment and experiment source code, a detailed Chinese tutorial, and measured results. Model weights, vendor SDKs, and compiled BPU models must be obtained separately.
 
-## 从这里开始
+![Embedding and retrieval pipeline](assets/pipeline.en.png)
 
-- **[详细附图教学博客](BLOG.md)**：CPU 入门、ION 内存问题、八块视觉分段、MLP 量化边界修复、BPU 部署、网页测试与测速。
-- [外部产物清单](docs/ARTIFACTS.md)：哪些文件没有包含，怎样放置已有匹配产物。
-- [实验复现路径](docs/EXPERIMENTS.md)、[源码索引](docs/SOURCE_INDEX.md)：高级量化阶段与依赖。
-- [证据索引](docs/EVIDENCE.md)：原始向量、逐轮计时、文件 SHA 与 API 检查。
+## What is included?
 
-## 实测效果
+- A CPU text-retrieval CLI using the official `SearchQuery` and `Document` prefixes.
+- An eight-chunk vision pipeline and a fusion model, with mixed-precision BPU deployment code.
+- A LAN browser interface for short text, a single image, or combined image–text input.
+- Quantization diagnostics, numerical checks, benchmark scripts, and 313 raw BPU output vectors.
+- A [step-by-step illustrated tutorial (Chinese)](BLOG.md), [source index (Chinese)](docs/SOURCE_INDEX.md), and [evidence index (Chinese)](docs/EVIDENCE.md).
 
-同 576 有效 patch / 128 tokens、CPU FP32 四线程 eager 的测试配置：
+The main quantization changes address GELU/MLP calibration boundaries while retaining the original weight bytes. The tested candidate places all 112 vision and 168 fusion Softmax computations on the BPU. Other processing still uses the CPU; this is not an all-INT8 or entirely BPU-only pipeline.
 
-| 输入 | CPU | BPU | 完整流程比较 |
+## Measured performance
+
+The comparison uses the same fixed configuration: 576 valid image patches, 128 tokens, and a four-thread FP32 CPU baseline with eager attention.
+
+| Input | CPU | BPU | End-to-end speedup |
 |---|---:|---:|---:|
-| 文本 | 2.684 s | 0.946 s | 约 2.84× |
-| 图片：六图批处理每图加权摊销 | 14.613 s | 5.355 s | 约 2.73× |
-| 图文：六图批处理每图加权摊销 | 14.578 s | 5.377 s | 约 2.71× |
+| Text | 2.684 s | 0.946 s | 2.84× |
+| Image — weighted time per image in six-image batches | 14.613 s | 5.355 s | 2.73× |
+| Image + text — weighted time per image in six-image batches | 14.578 s | 5.377 s | 2.71× |
 
-![真实性能比较](assets/speed_comparison.png)
+![Measured end-to-end performance](assets/speed_comparison.en.png)
 
-BPU 每类完成 100 次 warm，包含 cold 的原始输出共 313 个；CPU 是文本 8 次、图片和图文各 18 张 warm 的小样本对照。六图批次通常等待约 32 秒，**每图摊销不是单张响应延迟**。单张图片约 11.47 秒、图文约 11.45 秒来自另行三次 warm 诊断，非单张 100 次验收。
+The BPU completed 100 warm runs per input type, with 313 total outputs including cold runs. The CPU comparison is a smaller sample: eight warm text runs and 18 warm images per image-based input type. End-to-end batch timing includes source-image processing, model loading/release, transfers, inference, and normalization.
 
-完整流程最低 FP32 向量余弦：文本 0.958444、图片 0.963487、图文 0.966395，所测检索检查通过。余弦 0.95 不等于 95% 问答正确率。样例六图中四个猫帧来自同一个 clip，不能当作独立场景。
+**Batch throughput is not single-image response latency.** A typical six-image batch takes about 32 seconds. A separate three-warm-run diagnostic measured approximately 11.47 seconds for a single image and 11.45 seconds for a single image–text request; this was not a 100-run single-request stability test.
 
-这是固定配置下的文本与离线图片/图文实验；音频、原生视频、实时多模态、生产泛化与多用户并发未验收。详细范围见 [验收报告](evidence/release_acceptance.json)。
+Minimum cosine similarity against the original FP32 output was 0.958444 for text, 0.963487 for images, and 0.966395 for image–text inputs. Retrieval checks passed on the tested samples. A cosine threshold of 0.95 does **not** mean 95% question-answering accuracy.
 
-## CPU 文本检索入门
+The six test images include four correlated cat frames from one clip. Results establish a limited fixed-configuration experiment, not independent-scene generalization. Audio, native video, real-time multimodal processing, production generalization, and multi-user concurrency have not been validated. See the [acceptance scope](evidence/release_acceptance.json) and [exact metrics](evidence/measured_metrics.json).
 
-在 ARM64 开发板上克隆项目，准备匹配环境与官方模型；具体安装与下载条件见博客。
+## CPU quick start
+
+### 1. Prepare the environment
+
+The recorded board environment is ARM64 Ubuntu 22.04.5, Python 3.10, PyTorch `2.14.1+cpu`, torchvision `0.29.1+cpu`, Transformers `5.19.0`, and Sentence Transformers `6.1.0`. Check that compatible wheels are available for your platform before installing; these versions describe the tested environment, not universal compatibility.
+
+Run in Bash on the board:
 
 ```bash
 git clone https://github.com/1760hwy/RDKX5_EmbeddingGemma2.git
 cd RDKX5_EmbeddingGemma2
-# 根据 BLOG.md 创建 .venv，并准备 model/ 官方快照。
-mkdir -p results
+python3 -m venv .venv
+.venv/bin/python -m pip install --no-cache-dir \
+  'torch==2.14.1+cpu' 'torchvision==0.29.1+cpu' \
+  --index-url https://download.pytorch.org/whl/cpu
+.venv/bin/python -m pip install --no-cache-dir -r requirements.txt
+.venv/bin/python -m pip check
+mkdir -p logs results
+```
+
+Reuse an existing validated environment instead of reinstalling it.
+
+### 2. Prepare the official model
+
+Obtain the model from [Google's official repository](https://huggingface.co/google/embeddinggemma-2), review its terms, and place the complete snapshot under `model/`. This project used revision:
+
+```text
+914f7f89142e33e77833254d9c9b90c3cef7303b
+```
+
+For a first download, `scripts/download_model.py` downloads that pinned snapshot and checks file sizes and LFS SHA256 values:
+
+```bash
+.venv/bin/python scripts/download_model.py
+```
+
+This command accesses the network. Reuse verified existing files when available. Do not commit authentication tokens. CPU inference uses FP32 and local files; do not substitute FP16 without checking the model's numerical requirements.
+
+### 3. Retrieve documents
+
+```bash
 .venv/bin/python scripts/infer.py \
-  --query '连不上无线网络，应该先检查什么？' \
-  --documents examples/documents.json \
+  --query 'What should I check when Wi-Fi will not connect?' \
+  --documents examples/documents.en.json \
   --threads 4 --dimension 768 \
   --output results/wifi_retrieval.json
 ```
 
-此自编资料库用于教学，未作为原板端验收数据集。CPU CLI 使用官方 SearchQuery/Document 前缀；网页候选比较的任务格式不同，不能混用两条路线的精度结论。
+The result contains a vector and a ranked list of existing documents, not a generated answer. The English sample corpus is an instructional example, not the dataset used for the recorded board acceptance tests.
 
-## 局域网网页测试
+## LAN browser testing
 
-先按 [外部产物清单](docs/ARTIFACTS.md) 提供九个匹配 BPU 模型、清单、官方模型、示例图片与板端适配运行库。
+The browser interface requires the existing accepted BPU artifacts; CPU setup alone does not make the BPU server runnable. Preserve the relative paths specified by [the pipeline manifest](evidence/pipeline_manifest.json):
+
+1. The complete official snapshot under `model/`.
+2. Eight matching vision `.bin` files and the matching fusion `.bin`, with the listed SHA256 values.
+3. The manifest at `bpu/vision_trim576/mlp_boundary_full16/full_board_inputs/pipeline_manifest.json`.
+4. `bpu/runtime/libembedding_bpu.so`, built from `scripts/bpu_persistent_runtime.cpp` against the board's vendor DNN SDK.
+5. The required sample files: `samples/GoldenGate.png`, `samples/kitchen_painting.jpg`, and `samples/prepared/video_frames/frame_01.png`. The current engine needs the Golden Gate image as a preprocessing-grid reference even when testing uploaded images. Sources and hashes are recorded in [sample_sources.json](evidence/sample_sources.json); media permissions must be checked separately.
+
+Then run:
 
 ```bash
 .venv/bin/python scripts/preflight_release.py --root . --bpu
 sh scripts/start_web_lab.sh
-# 在同一局域网浏览器打开 http://<BOARD_IP>:8088
+curl http://127.0.0.1:8088/api/status
 ```
 
-网页支持短文本、单张图片、图文联合与候选描述排序，显示实际输入推理时间、总耗时、tokens 和 768 维向量。它不接入外部聊天服务，也不自动生成答案。服务没有认证，仅用于可信局域网实验；公网或生产用途需要单独评审。
+Wait for `ready`, then open `http://<BOARD_IP>:8088` in a browser on the same LAN. Stop the service with `sh scripts/stop_web_lab.sh`.
 
-## 复现与文件边界
+The interface shows candidate rankings, input-inference time, total request time, token count, and the 768-dimensional vector. Initial candidate encoding adds to total request time. Replace the preset candidate list with relevant documents: if every candidate is unrelated, the top-ranked result can still be irrelevant.
 
-本仓库提供源码和证据，**不是空目录一键重建所有 BPU bin 的完整构建发行版**。量化实验依赖历史 ONNX、校准数据、FP32 参考、两层诊断与厂商编译缓存；运行前阅读 EXPERIMENTS.md。多数实验脚本固定输出路径，不能在唯一原始工程中盲目重跑。
+The web interface currently uses Chinese labels. It uses a different input task format from the CPU CLI; it does not automatically apply the CLI's retrieval prefixes. The server uses a single inference worker and has no authentication. Use it on a trusted test LAN; public or production deployment needs a separate review.
 
-公开文件不含权重、ONNX/HBM/bin、SDK、wheel、虚拟环境、私有连接凭据或待授权图片。示例图片来源与 SHA 保留，媒体由使用者依法获取。
+## Reproducibility boundaries
 
-## 本地源码检查
+This is a source-and-evidence release, **not a one-command build of every BPU model from an empty directory**. Advanced quantization scripts depend on historical ONNX exports, calibration data, FP32 references, intermediate diagnostics, and vendor compilation caches that are not distributed here. The recorded compiler environment used hb_mapper 1.24.3 and hbdk 3.49.15, separately from the model-export environment.
+
+Consult the [artifact requirements (Chinese)](docs/ARTIFACTS.md) and [experiment sequence (Chinese)](docs/EXPERIMENTS.md) before running those scripts. Many write to fixed experiment paths; use an isolated project copy and inspect dependencies before rerunning.
+
+No weights, ONNX/HBM/bin files, SDKs, wheels, virtual environments, private connection credentials, or unlicensed sample images are included. A clean-environment, independent reproduction of the full BPU build remains outstanding.
+
+## Local source checks
 
 ```bash
 python tools/verify_package.py
 ```
 
-此检查不下载模型、不连接开发板，也不执行推理。核对 Python 语法、文内链接、复制文件 SHA 和敏感模式。项目发布前检查见 [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md)。
+This checks Python syntax, Markdown links, source-file hashes, and selected sensitive patterns. It does not download models, contact the board, or validate inference. See the [release checklist (Chinese)](RELEASE_CHECKLIST.md) for remaining work.
 
-## 许可证
+## License
 
-自有源码、教程和自绘图采用仓库已有的 **[MIT License](LICENSE)**。官方模型、厂商 SDK 和第三方媒体遵守各自许可，详见 [第三方说明](THIRD_PARTY_NOTICES.md) 与 [许可范围](LICENSE_SELECTION.md)。
+Project-owned source code, tutorial materials, and diagrams use the existing **[MIT License](LICENSE)**. The official model, vendor SDKs, and third-party media retain their respective licenses. See [third-party notices (Chinese)](THIRD_PARTY_NOTICES.md) and [license scope (Chinese)](LICENSE_SELECTION.md).

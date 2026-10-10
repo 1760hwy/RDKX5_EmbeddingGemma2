@@ -3417,7 +3417,11 @@
     "assets/pipeline.png",
     "docs/SOURCE_INDEX.md",
     "scripts/preflight_release.py",
-    "tools/verify_package.py"
+    "tools/verify_package.py",
+    "README.zh-CN.md",
+    "examples/documents.en.json",
+    "assets/pipeline.en.png",
+    "assets/speed_comparison.en.png"
   ],
   "source_project_modified": false,
   "license": "MIT for project-owned materials; third-party licenses remain separate",

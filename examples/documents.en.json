@@ -1,0 +1,7 @@
+[
+  "If Wi-Fi will not connect, first check that the router is on, the network name and password are correct, and the device supports the network band. Then check signal strength.",
+  "A BPU model may fail to load because an ION memory pool is insufficient. Inspect the actual exit code and allocation log rather than relying only on available system RAM.",
+  "An embedding model converts text or images into vectors for semantic retrieval. It does not generate conversational answers.",
+  "Query and document vectors must share the same dimension. Use the appropriate task prefixes and normalization. Cosine similarity is not the probability that an answer is correct.",
+  "Processing six images together can amortize model-loading costs, but time per image derived from batch throughput is not single-request response latency."
+]
